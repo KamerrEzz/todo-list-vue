@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/todo-trello-vue',
+  base: '/todo-list-vue',
   plugins: [vue()],
   resolve: {
     alias: {
