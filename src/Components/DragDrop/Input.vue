@@ -5,7 +5,7 @@ const text = ref('');
 const emits = defineEmits(["onNewItem"])
 
 function handleSubmit() {
-    if (text !== '') {
+    if (text.value !== '') {
         emits("onNewItem", text);
         text.value = '';
     }

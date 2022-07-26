@@ -14,6 +14,10 @@ function handleNewItem(text, board) {
     });
 }
 
+function deleteItem(item, board) {
+    board.items = board.items.filter(i => i.id !== item.id);
+}
+
 function handleNewboard() {
     const name = prompt("Nombre del board");
     boards.push({
@@ -55,7 +59,7 @@ function onDrop(evt, dest) {
                 <div class="items">
                     <div class="item" draggable="true" @dragstart="startDrag($event, board, item)"
                         v-for="item in board.items" :key="item.id">
-                        {{ item.title }}
+                        {{ item.title }} <button class="btndelete" @click.prevent="deleteItem(item, board)">x</button>
                     </div>
                 </div>
             </div>
@@ -114,5 +118,14 @@ li a:hover {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btndelete {
+    background: #454545;
+    border: none;
+    color: #efefef;
+    cursor: pointer;
 }
 </style>
