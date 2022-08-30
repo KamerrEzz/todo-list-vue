@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 4173"
+    "preview": "vite preview --port 4173",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^4.0.0",
@@ -13,5 +14,6 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.1",
     "vite": "^3.0.1"
-  }
+  },
+  "homepage": "https://kamerrezz.github.io/todo-list-vue/"
 }
